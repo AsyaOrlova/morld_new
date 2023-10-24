@@ -30,9 +30,8 @@ import json
 import os
 
 # you need to add path of mol_dqn and gym-molecule. Example,
-# import sys
-# sys.path.append("~/google-research")
-# sys.path.append("~/rl_graph_generation/gym-molecule")
+import sys
+sys.path.append("C:\\Users\\computer\\Documents\\GitHub")
 
 
 from absl import app
@@ -41,7 +40,7 @@ from absl import flags
 from rdkit import Chem
 
 from rdkit.Chem import QED
-from tensorflow import gfile
+from tensorflow.io import gfile
 from mol_dqn.chemgraph.dqn import deep_q_networks
 from mol_dqn.chemgraph.dqn import molecules as molecules_mdp
 from mol_dqn.chemgraph.dqn import run_dqn
