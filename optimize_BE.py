@@ -126,7 +126,7 @@ class BARewardMolecule(molecules_mdp.Molecule):
 def main(argv):
   del argv  # unused.
   if FLAGS.hparams is not None:
-    with gfile.Open(FLAGS.hparams, 'r') as f:
+    with gfile.GFile(FLAGS.hparams, 'r') as f:
       hparams = deep_q_networks.get_hparams(**json.load(f))
   else:
     hparams = deep_q_networks.get_hparams()
